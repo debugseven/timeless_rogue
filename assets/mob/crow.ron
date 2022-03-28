@@ -1,0 +1,8 @@
+Mob (
+    name: "Crow",
+    health: 10,
+    drop: Drop (
+        items: [],
+        gold: 2,
+    )
+)

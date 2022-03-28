@@ -1,0 +1,8 @@
+Mob (
+    name: "Phoenix",
+    health: 20,
+    drop: Drop (
+        items: ["fire_rune"],
+        gold: 5,
+    )
+)
