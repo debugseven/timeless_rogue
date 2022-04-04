@@ -2,7 +2,7 @@
 macro_rules! item {
     ( $( $x:expr ),* ) => {
         {
-            use crate::asset::Item;
+            use timeless_rogue::asset::Item;
             use std::collections::HashMap;
             let mut items = HashMap::new();
             $(
@@ -16,10 +16,10 @@ macro_rules! item {
 }
 
 #[macro_export]
-macro_rules! enemy {
+macro_rules! mob {
     ( $( $x:expr ),* ) => {
         {
-            use crate::asset::Mob;
+            use timeless_rogue::asset::Mob;
             use std::collections::HashMap;
             let mut mobs = HashMap::new();
             $(
@@ -28,6 +28,23 @@ macro_rules! enemy {
             )*
 
             mobs
+        }
+    };
+}
+
+#[macro_export]
+macro_rules! dungeon {
+    ( $( $x:expr ),* ) => {
+        {
+            use timeless_rogue::asset::Dungeon;
+            use std::collections::HashMap;
+            let mut dungeons = HashMap::new();
+            $(
+                let file = include_str!(concat!("../assets/dungeon/", $x, ".ron"));
+                dungeons.insert($x.to_string(), Dungeon::from(file));
+            )*
+
+            dungeons
         }
     };
 }

@@ -2,7 +2,9 @@ Mob (
     name: "Phoenix",
     health: 20,
     drop: Drop (
-        items: ["fire_rune"],
+        items: [(5, "fire_rune")],
         gold: 5,
-    )
+    ),
+    min_attack: 2,
+    max_attack: 6,
 )

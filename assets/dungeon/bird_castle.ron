@@ -1,0 +1,6 @@
+Dungeon (
+    name: "Bird Castle",
+    stages: [
+        "crow", "crow", "phoenix",
+    ]
+)

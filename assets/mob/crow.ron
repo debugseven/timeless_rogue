@@ -4,5 +4,7 @@ Mob (
     drop: Drop (
         items: [],
         gold: 2,
-    )
+    ),
+    min_attack: 2,
+    max_attack: 4,
 )
